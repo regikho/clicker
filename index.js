@@ -22,14 +22,15 @@ function start() {
         timer--;
         timerNode.innerText = `Time: ${timer}`;
 
-        if (timer === 0) {
+        if (!timer) {
             clearInterval(interval);
             clickButton.style.display = 'none';
             timerNode.style.display = 'none';
             scoreNode.style.fontSize = '50px';
+            
             setTimeout(() => {
                 scoreNode.style.display = 'none';
-                scoreNode.style.fontSize = '16px';
+                scoreNode.style.fontSize = '35px';
                 startButton.style.display = 'inline-block';
                 timer = 5;
                 score = 0;

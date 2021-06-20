@@ -1,12 +1,44 @@
+@font-face {
+    font-family: 'Shnobel';
+    src: url(./fonts/shnobel.ttf);
+}
+
 html {
     height: 100%;
+    background-color: #c1a2a0b2;
 }
 
 body {
     height: 100%;
+    overflow-y: hidden;
 }
 
 #app {
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+}
+
+#score {
+    color: white;
+    font-weight: bold;
+    font-family: 'Shnobel';
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+#timer {
+    color: white;
+    font-weight: bold;
+    font-family: 'Shnobel';
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.buttons {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -14,25 +46,27 @@ body {
 }
 
 .button {
-    text-decoration: none;
     display: inline-block;
     color: white;
     padding: 20px 30px;
     margin: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Shnobel';
+    font-weight: bold;
+    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-color: #573342ad;
     background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    border-radius: 10px;
-    border: none;
+    border: 1mm solid #573342;
+
+}
+
+.button:active {
+    background-color: #573342;
+    padding: 15px 25px;
 }
 
 #click-button {
-    display: none;
-}
-
-#score {
     display: none;
 }
