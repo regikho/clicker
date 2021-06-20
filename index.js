@@ -14,6 +14,7 @@ function start() {
     startButton.style.display = 'none';
     clickButton.style.display = 'inline-block';
     scoreNode.style.display = 'block';
+    timerNode.style.display = 'block';
     scoreNode.innerText = `Score: ${score}`;
     timerNode.innerText = `Time: ${timer}`;
 
@@ -26,6 +27,13 @@ function start() {
             clickButton.style.display = 'none';
             timerNode.style.display = 'none';
             scoreNode.style.fontSize = '50px';
+            setTimeout(() => {
+                scoreNode.style.display = 'none';
+                scoreNode.style.fontSize = '16px';
+                startButton.style.display = 'inline-block';
+                timer = 5;
+                score = 0;
+            }, 5000);
         }
     }, 1000);
 }
